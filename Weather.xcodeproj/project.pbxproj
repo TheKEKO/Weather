@@ -56,15 +56,55 @@
 		D41E2E512891C8BC00703C6E /* Weather */ = {
 			isa = PBXGroup;
 			children = (
-				D41E2E522891C8BC00703C6E /* AppDelegate.swift */,
-				D41E2E542891C8BC00703C6E /* SceneDelegate.swift */,
-				D41E2E562891C8BC00703C6E /* ViewController.swift */,
-				D41E2E582891C8BC00703C6E /* Main.storyboard */,
-				D41E2E5B2891C8BE00703C6E /* Assets.xcassets */,
-				D41E2E5D2891C8BE00703C6E /* LaunchScreen.storyboard */,
-				D41E2E602891C8BE00703C6E /* Info.plist */,
+				D4ED090628959823008FB545 /* ViewControllers */,
+				D4ED090728959834008FB545 /* Models */,
+				D4ED09082895984B008FB545 /* Storyboards */,
+				D4ED090928959860008FB545 /* Resources */,
+				D4ED090A28959868008FB545 /* App */,
 			);
 			path = Weather;
+			sourceTree = "<group>";
+		};
+		D4ED090628959823008FB545 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D41E2E562891C8BC00703C6E /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D4ED090728959834008FB545 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D4ED09082895984B008FB545 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D41E2E582891C8BC00703C6E /* Main.storyboard */,
+				D41E2E5D2891C8BE00703C6E /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D4ED090928959860008FB545 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D41E2E5B2891C8BE00703C6E /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D4ED090A28959868008FB545 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D41E2E602891C8BE00703C6E /* Info.plist */,
+				D41E2E522891C8BC00703C6E /* AppDelegate.swift */,
+				D41E2E542891C8BC00703C6E /* SceneDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
