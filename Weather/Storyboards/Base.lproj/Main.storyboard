@@ -105,6 +105,11 @@
                             <constraint firstItem="QiS-VX-Dtz" firstAttribute="bottom" secondItem="r0J-Na-3EA" secondAttribute="bottom" id="yxk-dI-ajs"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="conditionImageView" destination="4w8-ab-OoH" id="Tl0-9I-i0S"/>
+                        <outlet property="searchTextField" destination="ml5-kp-uZf" id="eAy-wD-DTb"/>
+                        <outlet property="temperatureLabel" destination="yT1-RM-90p" id="lOC-PU-H1i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LeB-M3-cEi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
