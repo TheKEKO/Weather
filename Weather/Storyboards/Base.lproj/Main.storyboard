@@ -50,6 +50,9 @@
                                                 </constraints>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <state key="normal" backgroundImage="magnifyingglass" catalog="system"/>
+                                                <connections>
+                                                    <action selector="searchPressed:" destination="1sB-D2-Ecg" eventType="touchUpInside" id="R4U-fS-xRQ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -106,9 +109,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cityLabel" destination="yT1-RM-90p" id="Lj7-td-e7c"/>
                         <outlet property="conditionImageView" destination="4w8-ab-OoH" id="Tl0-9I-i0S"/>
                         <outlet property="searchTextField" destination="ml5-kp-uZf" id="eAy-wD-DTb"/>
-                        <outlet property="temperatureLabel" destination="yT1-RM-90p" id="lOC-PU-H1i"/>
+                        <outlet property="temperatureLabel" destination="t0g-UR-7cR" id="wij-jw-Gn2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LeB-M3-cEi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
