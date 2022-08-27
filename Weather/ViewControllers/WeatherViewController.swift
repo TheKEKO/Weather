@@ -24,47 +24,45 @@ class WeatherViewController: UIViewController {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
-
+        
         weatherManager.delegate = self
         searchTextField.delegate = self
     }
 }
 
-    //MARK: - UITextFieldDelegate
-
-    extension WeatherViewController: UITextFieldDelegate {
-        
-        @IBAction func searchPressed(_ sender: UIButton) {
-            searchTextField.endEditing(true)
-        }
-        
-        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-            searchTextField.endEditing(true)
+//MARK: - UITextFieldDelegate
+extension WeatherViewController: UITextFieldDelegate {
+    
+    @IBAction func searchPressed(_ sender: UIButton) {
+        searchTextField.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        searchTextField.endEditing(true)
+        return true
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if textField.text != "" {
             return true
-        }
-        
-        func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-            if textField.text != "" {
-                return true
-            } else {
-                textField.placeholder = "Type something"
-                return false
-            }
-        }
-        
-        func textFieldDidEndEditing(_ textField: UITextField) {
-            
-            if let city = searchTextField.text {
-                weatherManager.fetchWeather(cityName: city)
-            }
-            
-            searchTextField.text = ""
-            
+        } else {
+            textField.placeholder = "Type something"
+            return false
         }
     }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        if let city = searchTextField.text {
+            weatherManager.fetchWeather(cityName: city)
+        }
+        
+        searchTextField.text = ""
+        
+    }
+}
 
 //MARK: - WeatherManagerDelegate
-
 extension WeatherViewController: WeatherManagerDelegate {
     
     func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
@@ -81,8 +79,6 @@ extension WeatherViewController: WeatherManagerDelegate {
 }
 
 //MARK: - CLLocationManagerDelegate
-
-
 extension WeatherViewController: CLLocationManagerDelegate {
     
     @IBAction func locationPressed(_ sender: UIButton) {
