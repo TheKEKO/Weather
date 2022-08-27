@@ -8,6 +8,12 @@
 import Foundation
 import CoreLocation
 
+
+protocol WeatherManagerDelegate {
+    func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel)
+    func didFailWithError(error: Error)
+}
+
 struct WeatherManager {
     let weatherURL = "https://api.openweathermap.org/data/2.5/weather?units=metric&appid=ad125f0089729e81bb0e3258b97ebec8&lang=eng"
     
