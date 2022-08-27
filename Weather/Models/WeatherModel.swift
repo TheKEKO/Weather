@@ -27,13 +27,13 @@ struct WeatherModel {
         case 600...622:
             return "cloud.snow"
         case 701...781:
-            return "cloud.fog"
+            return "tornado"
         case 800:
             return "sun.max"
         case 801...804:
-            return "cloud.bolt"
-        default:
             return "cloud"
+        default:
+            return "tropicalstorm"
         }
     }
 }
